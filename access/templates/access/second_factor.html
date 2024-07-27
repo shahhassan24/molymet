@@ -1,0 +1,44 @@
+{% extends "./base_login.html" %}
+{% load static %}
+
+{% block login_card %}
+
+				<!-- Content area -->
+				<div class="content d-flex justify-content-center align-items-center">
+
+					<!-- Password recovery form -->
+					<form class="login-form" method="POST">
+						{% csrf_token %}
+						<div class="card mb-0">
+							<div class="card-body">
+								<div class="text-center mb-3">
+									<div class="d-inline-flex bg-primary bg-opacity-10 text-primary lh-1 rounded-pill p-3 mb-3 mt-1">
+										<i class="ph-arrows-counter-clockwise ph-2x"></i>
+									</div>
+									<h5 class="mb-0">Segundo factor de autenticación</h5>
+									<span class="d-block text-muted">Por favor ingrese la clave enviada al mail.</span>
+								</div>
+
+								<div class="mb-3">
+									<label class="form-label">Clave de 7 dígitos</label>
+									<div class="form-control-feedback form-control-feedback-start">
+										<input type="text" class="form-control" placeholder="1234567" name="second_factor" id="id_second_factor">
+										<div class="form-control-feedback-icon">
+											<i class="ph-lock-key text-muted"></i>
+										</div>
+									</div>
+								</div>
+
+								<button type="submit" class="btn btn-primary w-100">
+									<i class="ph-sign-in me-2"></i>
+									Ingresar
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- /password recovery form -->
+
+				</div>
+				<!-- /content area -->
+
+{% endblock %}
