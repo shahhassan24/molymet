@@ -8,6 +8,8 @@ from . import views
 
 urlpatterns = [
 	path("", views.index, name="index"),
+	path("dashboard-analytics/", views.dashboard_analytics, name="dashboard-analytics"),
+
 
 ]
 
